@@ -1,0 +1,148 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sistem Pakar Penyakit dan Hama Kopi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #f3f1e7; /* Light coffee color */
+        }
+        header, footer {
+            background-color: #6f4e37; /* Dark coffee color */
+        }
+        .text-coffee {
+            color: #6f4e37; /* Dark coffee color */
+        }
+        .bg-coffee {
+            background-color: #6f4e37; /* Dark coffee color */
+        }
+        .bg-light-coffee {
+            background-color: #d7ccc8; /* Light coffee color */
+        }
+    </style>
+</head>
+<body class="font-roboto">
+    <header class="text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Sistem Pakar Penyakit dan Hama Kopi</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a class="hover:underline" href="index.html">Home</a></li>
+                    <li><a class="hover:underline" href="diagnosis.html">Diagnosa</a></li>
+                    <li><a class="hover:underline" href="penyakit.html">Penyakit</a></li>
+                    <li><a class="hover:underline" href="hama.html">Hama</a></li>
+                    <li><a class="hover:underline" href="pengendalianumum.html">Pengendalian</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto p-4">
+        <section class="mb-8" id="diagnosis">
+            <h2 class="text-2xl font-bold mb-4 text-coffee">Diagnosa Penyakit dan Hama Kopi</h2>
+            <form class="bg-white p-4 rounded shadow">
+                <div class="mb-4">
+                    <label class="block text-coffee text-sm font-bold mb-2" for="symptom">
+                        Gejala yang Terlihat
+                    </label>
+                    <textarea id="symptom" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" placeholder="Deskripsikan gejala yang terlihat pada tanaman kopi..."></textarea>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-coffee text-sm font-bold mb-2" for="part">
+                        Bagian Tanaman yang Terkena
+                    </label>
+                    <select id="part" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="">Pilih Bagian Tanaman</option>
+                        <option value="daun">Daun</option>
+                        <option value="buah">Buah</option>
+                        <option value="batang">Batang</option>
+                        <option value="akar">Akar</option>
+                    </select>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button class="bg-coffee hover:bg-light-coffee text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="diagnose()">
+                        Diagnosa
+                    </button>
+                </div>
+            </form>
+            <div id="diagnosis-result" class="mt-8 hidden">
+                <h3 class="text-xl font-bold mb-2 text-coffee">Hasil Diagnosa</h3>
+                <div class="bg-white p-4 rounded shadow">
+                    <h4 class="text-lg font-bold mb-2 text-coffee" id="diagnosis-name"></h4>
+                    <p class="mb-2"><strong>Gejala:</strong> <span id="diagnosis-symptom"></span></p>
+                    <p class="mb-2"><strong>Pengendalian:</strong></p>
+                    <ul class="list-disc list-inside" id="diagnosis-control"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>© 2023 Sistem Pakar Penyakit dan Hama Kopi. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function diagnose() {
+            const symptom = document.getElementById('symptom').value.toLowerCase();
+            const part = document.getElementById('part').value;
+
+            let diagnosis = {
+                name: '',
+                symptom: '',
+                control: []
+            };
+
+            if (part === 'daun' && symptom.includes('bercak coklat')) {
+                diagnosis.name = 'Bercak Daun (Cercospora coffeicola)';
+                diagnosis.symptom = 'Daun tanaman kopi menunjukkan bercak coklat dengan tepi yang berwarna kekuningan.';
+                diagnosis.control = [
+                    'Pemangkasan daun yang terinfeksi.',
+                    'Pemberian fungisida yang mengandung tembaga atau mancozeb.',
+                    'Menghindari kelembapan yang berlebihan di sekitar tanaman.'
+                ];
+            } else if (part === 'buah' && symptom.includes('hitam')) {
+                diagnosis.name = 'Bercak Hitam pada Buah Kopi (Colletotrichum spp.)';
+                diagnosis.symptom = 'Buah kopi yang terkena serangan menjadi hitam, keras, dan tidak dapat dipanen.';
+                diagnosis.control = [
+                    'Penyemprotan fungisida yang mengandung mankozeb atau kaptafol.',
+                    'Pengelolaan tanaman dengan jarak tanam yang cukup agar sirkulasi udara lancar.'
+                ];
+            } else if (part === 'batang' && symptom.includes('rusak')) {
+                diagnosis.name = 'Kumbang Penggerek Batang Kopi (Xylosandrus compactus)';
+                diagnosis.symptom = 'Kumbang ini menyerang batang kopi, menyebabkan kerusakan internal dan penurunan kualitas tanaman.';
+                diagnosis.control = [
+                    'Pemangkasan bagian batang yang terinfeksi.',
+                    'Penyemprotan insektisida yang mengandung klorpirifos atau diazinon.',
+                    'Pemeliharaan kebun yang bersih dan sehat.'
+                ];
+            } else if (part === 'akar' && symptom.includes('membusuk')) {
+                diagnosis.name = 'Busuk Akhir (Phytophthora spp.)';
+                diagnosis.symptom = 'Akar kopi membusuk, menyebabkan tanaman layu dan mati. Pembusukan juga dapat menyerang batang.';
+                diagnosis.control = [
+                    'Penggunaan fungisida seperti fosetil-aluminium atau metalaksil.',
+                    'Pengaturan drainase yang baik untuk menghindari genangan air.',
+                    'Penghindaran penyiraman berlebihan.'
+                ];
+            } else {
+                diagnosis.name = 'Tidak Diketahui';
+                diagnosis.symptom = 'Gejala yang Anda masukkan tidak cocok dengan penyakit atau hama yang ada dalam sistem.';
+                diagnosis.control = ['Silakan konsultasikan dengan ahli pertanian untuk diagnosa lebih lanjut.'];
+            }
+
+            document.getElementById('diagnosis-name').innerText = diagnosis.name;
+            document.getElementById('diagnosis-symptom').innerText = diagnosis.symptom;
+            const controlList = document.getElementById('diagnosis-control');
+            controlList.innerHTML = '';
+            diagnosis.control.forEach(control => {
+                const li = document.createElement('li');
+                li.innerText = control;
+                controlList.appendChild(li);
+            });
+
+            document.getElementById('diagnosis-result').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

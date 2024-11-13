@@ -1,0 +1,98 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sistem Pakar Penyakit dan Hama Kopi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #f3f1e7; /* Light coffee color */
+        }
+        header, footer {
+            background-color: #6f4e37; /* Dark coffee color */
+        }
+        .text-coffee {
+            color: #6f4e37; /* Dark coffee color */
+        }
+        .bg-coffee {
+            background-color: #6f4e37; /* Dark coffee color */
+        }
+        .bg-light-coffee {
+            background-color: #d7ccc8; /* Light coffee color */
+        }
+    </style>
+</head>
+<body class="font-roboto">
+    <header class="text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Sistem Pakar Penyakit dan Hama Kopi</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a class="hover:underline" href="index.html">Home</a></li>
+                    <li><a class="hover:underline" href="diagnosis.html">Diagnosa</a></li>
+                    <li><a class="hover:underline" href="penyakit.html">Penyakit</a></li>
+                    <li><a class="hover:underline" href="hama.html">Hama</a></li>
+                    <li><a class="hover:underline" href="pengendalianumum.html">Pengendalian</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto p-4">
+        <section class="mb-8" id="penyakit">
+            <h2 class="text-2xl font-bold mb-4 text-coffee">Daftar Penyakit Kopi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Daun tanaman kopi dengan bercak coklat dan tepi kekuningan" class="w-full h-40 object-cover rounded mb-4" height="200" src="bercak.jpeg" width="300"/>
+                    <h3 class="text-xl font-bold mb-2 text-coffee">Bercak Daun (Cercospora coffeicola)</h3>
+                    <p class="mb-2"><strong>Gejala:</strong> Daun tanaman kopi menunjukkan bercak coklat dengan tepi yang berwarna kekuningan.</p>
+                    <p class="mb-2"><strong>Pengendalian:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>Pemangkasan daun yang terinfeksi.</li>
+                        <li>Pemberian fungisida yang mengandung tembaga atau mancozeb.</li>
+                        <li>Menghindari kelembapan yang berlebihan di sekitar tanaman.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Daun kopi dengan bercak-bercak oranye dan pustula spora jamur" class="w-full h-40 object-cover rounded mb-4" height="200" src="karangkp.jpeg" width="300"/>
+                    <h3 class="text-xl font-bold mb-2 text-coffee">Karang Kopi (Hemileia vastatrix)</h3>
+                    <p class="mb-2"><strong>Gejala:</strong> Daun kopi berubah warna menjadi kuning dan tampak bercak-bercak oranye yang merupakan pustula spora jamur.</p>
+                    <p class="mb-2"><strong>Pengendalian:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>Menggunakan varietas kopi yang tahan terhadap penyakit karang.</li>
+                        <li>Penyemprotan fungisida berbahan aktif seperti triadimenol, tebukonazol, atau propikonazol.</li>
+                        <li>Pemangkasan cabang yang terinfeksi dan menjaga kebersihan kebun.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Akar kopi yang membusuk dan batang yang terinfeksi" class="w-full h-40 object-cover rounded mb-4" height="200" src="busuk.jpeg" width="300"/>
+                    <h3 class="text-xl font-bold mb-2 text-coffee">Busuk Akhir (Phytophthora spp.)</h3>
+                    <p class="mb-2"><strong>Gejala:</strong> Akar kopi membusuk, menyebabkan tanaman layu dan mati. Pembusukan juga dapat menyerang batang.</p>
+                    <p class="mb-2"><strong>Pengendalian:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>Penggunaan fungisida seperti fosetil-aluminium atau metalaksil.</li>
+                        <li>Pengaturan drainase yang baik untuk menghindari genangan air.</li>
+                        <li>Penghindaran penyiraman berlebihan.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Buah kopi yang hitam dan keras akibat serangan Colletotrichum spp." class="w-full h-40 object-cover rounded mb-4" height="200" src="hitam.jpeg" width="300"/>
+                    <h3 class="text-xl font-bold mb-2 text-coffee">Bercak Hitam pada Buah Kopi (Colletotrichum spp.)</h3>
+                    <p class="mb-2"><strong>Gejala:</strong> Buah kopi yang terkena serangan menjadi hitam, keras, dan tidak dapat dipanen.</p>
+                    <p class="mb-2"><strong>Pengendalian:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>Penyemprotan fungisida yang mengandung mankozeb atau kaptafol.</li>
+                        <li>Pengelolaan tanaman dengan jarak tanam yang cukup agar sirkulasi udara lancar.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>© 2023 Sistem Pakar Penyakit dan Hama Kopi. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

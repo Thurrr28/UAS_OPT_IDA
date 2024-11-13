@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sistem Pakar Penyakit dan Hama Kopi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #f3f1e7; /* Light coffee color */
+        }
+        header, footer {
+            background-color: #6f4e37; /* Dark coffee color */
+        }
+        .text-coffee {
+            color: #6f4e37; /* Dark coffee color */
+        }
+        .bg-coffee {
+            background-color: #6f4e37; /* Dark coffee color */
+        }
+        .bg-light-coffee {
+            background-color: #d7ccc8; /* Light coffee color */
+        }
+    </style>
+</head>
+<body class="font-roboto">
+    <header class="text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Sistem Pakar Penyakit dan Hama Kopi</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a class="hover:underline" href="index.html">Home</a></li>
+                    <li><a class="hover:underline" href="diagnosis.html">Diagnosa</a></li>
+                    <li><a class="hover:underline" href="penyakit.html">Penyakit</a></li>
+                    <li><a class="hover:underline" href="hama.html">Hama</a></li>
+                    <li><a class="hover:underline" href="pengendalianumum.html">Pengendalian</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto p-4">
+        <section class="mb-8" id="hama">
+            <h2 class="text-2xl font-bold mb-4 text-coffee">Hama Kopi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Buah kopi yang rusak akibat serangan Hypothenemus hampei" class="w-full h-40 object-cover rounded mb-4" height="200" src="kutu.jpeg" width="300"/>
+                    <h3 class="text-xl font-bold mb-2 text-coffee">Hama Penggerek Buah Kopi (Hypothenemus hampei)</h3>
+                    <p class="mb-2"><strong>Gejala:</strong> Hama ini menggerek buah kopi, menyebabkan buah menjadi busuk dan jatuh sebelum matang.</p>
+                    <p class="mb-2"><strong>Pengendalian:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>Pengumpulan dan pemusnahan buah yang jatuh dan terinfeksi.</li>
+                        <li>Penggunaan perangkap feromon untuk mengurangi populasi hama.</li>
+                        <li>Penggunaan insektisida yang sesuai seperti imidakloprid.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Batang kopi yang rusak akibat serangan Xylosandrus compactus" class="w-full h-40 object-cover rounded mb-4" height="200" src="kumbang.jpeg" width="300"/>
+                    <h3 class="text-xl font-bold mb-2 text-coffee">Kumbang Penggerek Batang Kopi (Xylosandrus compactus)</h3>
+                    <p class="mb-2"><strong>Gejala:</strong> Kumbang ini menyerang batang kopi, menyebabkan kerusakan internal dan penurunan kualitas tanaman.</p>
+                    <p class="mb-2"><strong>Pengendalian:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>Pemangkasan bagian batang yang terinfeksi.</li>
+                        <li>Penyemprotan insektisida yang mengandung klorpirifos atau diazinon.</li>
+                        <li>Pemeliharaan kebun yang bersih dan sehat.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Daun dan buah kopi yang berubah warna menjadi perak atau keriput akibat serangan thrips" class="w-full h-40 object-cover rounded mb-4" height="200" src="perak.jpeg" width="300"/>
+                    <h3 class="text-xl font-bold mb-2 text-coffee">Thrips Kopi (Scirtothrips aurantii)</h3>
+                    <p class="mb-2"><strong>Gejala:</strong> Daun dan buah kopi akan mengalami perubahan warna menjadi perak atau keriput karena serangan thrips.</p>
+                    <p class="mb-2"><strong>Pengendalian:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>Penggunaan insektisida berbahan aktif abamectin atau imidakloprid.</li>
+                        <li>Peningkatan kelembaban di sekitar tanaman untuk mengurangi kerusakan.</li>
+                        <li>Pengendalian alami dengan memperkenalkan musuh alami seperti laba-laba atau serangga pemangsa.</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Buah kopi yang membusuk akibat serangan larva lalat buah" class="w-full h-40 object-cover rounded mb-4" height="200" src="lalat.jpeg" width="300"/>
+                    <h3 class="text-xl font-bold mb-2 text-coffee">Lalat Buah (Bactrocera spp.)</h3>
+                    <p class="mb-2"><strong>Gejala:</strong> Lalat ini bertelur di dalam buah kopi, yang kemudian membusuk saat larva berkembang.</p>
+                    <p class="mb-2"><strong>Pengendalian:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>Penggunaan perangkap bau atau perangkap bentuk untuk menangkap lalat dewasa.</li>
+                        <li>Penyemprotan insektisida berbahan aktif seperti malation atau dimetoat.</li>
+                        <li>Pemusnahan buah yang terinfeksi.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>© 2023 Sistem Pakar Penyakit dan Hama Kopi. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
